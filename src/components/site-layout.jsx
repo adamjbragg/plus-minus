@@ -14,11 +14,6 @@ const Layout = function ({
 	const router = useRouter();
 	const canonicalURL = `${process.env.NEXT_PUBLIC_SITE_URL}${router.pathname}`;
 
-	// ,radial-gradient(at 25% 25%, hsla(240, 97%, 13%, 1) 0px, transparent 50%),
-	// 			radial-gradient(at 53% 92%, hsla(135, 0%, 0%, 1) 0px, transparent 50%),
-	// 			radial-gradient(at 15% 92%, hsla(236, 100%, 16%, 1) 0px, transparent 50%),
-	// 			radial-gradient(at 98% 100%, hsla(248, 97%, 14%, 1) 0px, transparent 50%)
-
 	return (
 		<motion.div
 			animate={{
