@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { NextSeo } from 'next-seo';
 import { motion } from 'framer-motion';
@@ -21,8 +20,6 @@ const Layout = function ({
 					'hsla(240, 97%, 13%, 1)',
 					'hsla(236, 100%, 8%, 1)',
 					'hsla(135, 0%, 0%, 1)',
-					// 'hsla(236, 100%, 16%, 1)',
-					// 'hsla(248, 97%, 14%, 1)',
 				],
 			}}
 			transition={{
