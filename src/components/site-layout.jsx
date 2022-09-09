@@ -49,7 +49,7 @@ const Layout = function ({
 			>
 				<NextSeo
 					title={pageTitle}
-					titleTemplate="AJB Next Starter | %s"
+					titleTemplate="Plus Minus • %s"
 					description={pageDescription}
 					canonical={canonicalURL}
 				/>
