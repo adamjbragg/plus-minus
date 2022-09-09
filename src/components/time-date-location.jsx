@@ -10,8 +10,9 @@ export default function TimeDateLocation() {
 	const ref = useRef(null);
 	const isInView = useInView(ref, { once: true });
 
-	const [date, setDate] = useState(new Date());
-	const [isSSR, setIsSSR] = useState(true);
+	const [date, setDate] = useState(new Date()); // initial date
+	const [isSSR, setIsSSR] = useState(true); // check if ssr
+
 	// options for formatting the time and date
 	const timeOptions = {
 		hour: 'numeric',
@@ -28,7 +29,7 @@ export default function TimeDateLocation() {
 	};
 
 	useEffect(() => {
-		setIsSSR(false);
+		setIsSSR(false); // client side
 		setInterval(() => setDate(new Date()), 1000);
 	}, []);
 
@@ -41,7 +42,8 @@ export default function TimeDateLocation() {
 				transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 1.5s',
 			}}
 		>
-			{!isSSR && <span>{date.toLocaleString('en-AU', timeOptions)}</span>}
+			{!isSSR && <span>{date.toLocaleString('en-AU', timeOptions)}</span>}{' '}
+			{/* if client side render time */}
 			<span> • {date.toLocaleString('en-AU', dateOptions)}</span>
 			<span> • Canberra, Australia</span>
 		</div>
