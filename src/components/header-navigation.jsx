@@ -7,7 +7,7 @@ const HeaderNavList = function () {
 	const router = useRouter();
 
 	return (
-		<div className="flex fixed bottom-16 w-full mx-auto left-1/2 -translate-x-1/2 justify-center px-8 z-10">
+		<div className="flex fixed bottom-[70px] w-full mx-auto left-1/2 -translate-x-1/2 justify-center px-8 z-10">
 			<ul className="flex justify-around items-center py-2 px-4  space-x-3 rounded-full w-fit shadow-lg z-10 bg-white">
 				{nav.items.map((item) => (
 					<li key={item.title}>
