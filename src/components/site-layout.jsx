@@ -14,56 +14,60 @@ const Layout = function ({
 	const router = useRouter();
 	const canonicalURL = `${process.env.NEXT_PUBLIC_SITE_URL}${router.pathname}`;
 
-	// const [counter, setCounter] = useState(0);
-
-	// useEffect(() => {
-	// 	const timeout = setTimeout(() => {
-	// 		setCounter(counter + 5);
-	// 	}, 1000);
-
-	// 	return () => {
-	// 		clearTimeout(timeout);
-	// 	};
-	// }, [counter]);
+	// ,radial-gradient(at 25% 25%, hsla(240, 97%, 13%, 1) 0px, transparent 50%),
+	// 			radial-gradient(at 53% 92%, hsla(135, 0%, 0%, 1) 0px, transparent 50%),
+	// 			radial-gradient(at 15% 92%, hsla(236, 100%, 16%, 1) 0px, transparent 50%),
+	// 			radial-gradient(at 98% 100%, hsla(248, 97%, 14%, 1) 0px, transparent 50%)
 
 	return (
 		<motion.div
-			layout
 			animate={{
-				// backgroundImage: `
-				// radial-gradient(at ${50}% 50%, hsla(240, 97%, 13%, 1) 0px, transparent 50%),radial-gradient(at 25% 25%, hsla(240, 97%, 13%, 1) 0px, transparent 50%),
-				// radial-gradient(at 53% 92%, hsla(135, 0%, 0%, 1) 0px, transparent 50%),
-				// radial-gradient(at 15% 92%, hsla(236, 100%, 16%, 1) 0px, transparent 50%),
-				// radial-gradient(at 98% 100%, hsla(248, 97%, 14%, 1) 0px, transparent 50%)
-				// `,
 				backgroundColor: [
 					'hsla(240, 97%, 13%, 1)',
 					'hsla(236, 100%, 8%, 1)',
 					'hsla(135, 0%, 0%, 1)',
-					'hsla(236, 100%, 16%, 1)',
-					'hsla(248, 97%, 14%, 1)',
+					// 'hsla(236, 100%, 16%, 1)',
+					// 'hsla(248, 97%, 14%, 1)',
 				],
 			}}
 			transition={{
-				duration: 10,
-				ease: 'linear',
+				type: 'tween',
+				duration: 5,
+				ease: [1, 1, 1, 1],
 				repeat: Infinity,
-				repeatType: 'mirror',
+				repeatType: 'reverse',
 			}}
-			className="gradbackground flex flex-col items-center justify-center min-h-full"
+			className="gradbackground flex min-w-full min-h-full"
 		>
-			<NextSeo
-				title={pageTitle}
-				titleTemplate="AJB Next Starter | %s"
-				description={pageDescription}
-				canonical={canonicalURL}
-			/>
-			<Header />
-			<HeaderNavList />
-			<main className="flex flex-col flex-1 w-full min-h-full px-5">
-				{children}
-			</main>
-			<Footer />
+			<motion.div
+				animate={{
+					backgroundImage: [
+						'radial-gradient(at 10% 20%, hsla(240, 97%, 13%, 1) 0px, transparent 50%)',
+						'radial-gradient(at 100% 80%, hsla(240, 97%, 13%, 1) 0px, transparent 50%)',
+					],
+				}}
+				transition={{
+					type: 'tween',
+					duration: 5,
+					ease: [1, 1, 1, 1],
+					repeat: Infinity,
+					repeatType: 'reverse',
+				}}
+				className="flex-1 flex flex-col items-center justify-center min-h-full"
+			>
+				<NextSeo
+					title={pageTitle}
+					titleTemplate="AJB Next Starter | %s"
+					description={pageDescription}
+					canonical={canonicalURL}
+				/>
+				<Header />
+				<HeaderNavList />
+				<main className="flex flex-col flex-1 w-full h-full px-5">
+					{children}
+				</main>
+				<Footer />
+			</motion.div>
 		</motion.div>
 	);
 };
