@@ -1,9 +1,9 @@
 import { useRouter } from 'next/router';
 import { NextSeo } from 'next-seo';
 import { motion } from 'framer-motion';
-import Header from './site-header';
-import Footer from './site-footer';
-import HeaderNavList from './header-navigation';
+import Header from './Header';
+import Footer from './Footer';
+import HeaderNavList from './HeaderNavigation';
 
 const Layout = function ({
 	children,

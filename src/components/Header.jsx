@@ -1,7 +1,8 @@
-import Link from 'next/link';
+import NextLink from 'next/link';
 import general from '@/data/general.json';
-import TimeDateLocation from './time-date-location';
-import Logo from './logo';
+import TimeDateLocation from './TimeDateLocation';
+import Logo from './Logo';
+import Link from './Link';
 
 const Header = function () {
 	return (
@@ -9,15 +10,15 @@ const Header = function () {
 			<div className="mx-auto">
 				<div className="flex w-full flex-row justify-center items-center py-5">
 					<h1 className="sr-only">{general.siteTitle}</h1>
-					<Link href="/">
+					<NextLink href="/">
 						<a className="fixed left-20">
 							<Logo />
 						</a>
-					</Link>
+					</NextLink>
 					<div className="text-center">
 						<TimeDateLocation />
 					</div>
-					<p className="fixed right-20">Start a Project</p>
+					<Link href="#" label="Start a Project" className="fixed right-20" />
 				</div>
 			</div>
 		</header>

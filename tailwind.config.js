@@ -5,14 +5,15 @@ module.exports = {
 		fontFamily: {
 			'space-sans': ['Space Grotesk', 'sans-serif'],
 		},
-		extend: {},
+		extend: {
+			colors: {
+				'pm-green': '#00FFB2',
+				'pm-purple': '#340B8A',
+			},
+		},
 	},
 	variants: {
 		extend: {},
 	},
-	plugins: [
-		require('@tailwindcss/typography'),
-		require('@tailwindcss/forms'),
-		require('@tailwindcss/line-clamp'),
-	],
+	plugins: [require('@tailwindcss/typography'), require('@tailwindcss/forms')],
 };

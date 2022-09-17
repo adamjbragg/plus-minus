@@ -1,5 +1,5 @@
 import general from '@/data/general.json';
-import InView from './in-view';
+import InView from './InView';
 
 const Footer = function () {
 	return (

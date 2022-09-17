@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import InView from './in-view';
+import InView from './InView';
 
 // set the date to a new current date for load
 // create an effect that runs on a 1 second interval to update the date
