@@ -56,27 +56,19 @@
 
 	html {
 		@apply text-white;
-		background-color: hsla(240, 97%, 13%, 1);
-		/* background-image: radial-gradient(
-				at 2% 1%,
-				hsla(240, 97%, 13%, 1) 0px,
-				transparent 50%
-			),
-			radial-gradient(at 92% 11%, hsla(236, 100%, 8%, 1) 0px, transparent 50%),
-			radial-gradient(at 75% 92%, hsla(135, 0%, 0%, 1) 0px, transparent 50%),
-			radial-gradient(at 15% 92%, hsla(236, 100%, 16%, 1) 0px, transparent 50%),
-			radial-gradient(at 80% 100%, hsla(248, 97%, 14%, 1) 0px, transparent 50%); */
+		background-color: hsla(248, 97%, 14%, 1);
 	}
+
 	.gradbackground {
 		background-image: radial-gradient(
-				at 2% 1%,
-				hsla(240, 97%, 13%, 1) 0px,
+				at 75% 0%,
+				hsla(236, 63%, 4%, 1) 0px,
 				transparent 50%
 			),
-			radial-gradient(at 92% 11%, hsla(236, 100%, 8%, 1) 0px, transparent 50%),
-			radial-gradient(at 75% 92%, hsla(135, 0%, 0%, 1) 0px, transparent 50%),
+			radial-gradient(at 2% 1%, hsla(240, 97%, 13%, 1) 0px, transparent 50%),
 			radial-gradient(at 15% 92%, hsla(236, 100%, 16%, 1) 0px, transparent 50%),
-			radial-gradient(at 80% 100%, hsla(248, 97%, 14%, 1) 0px, transparent 50%);
+			radial-gradient(at 80% 100%, hsla(248, 97%, 14%, 1) 0px, transparent 50%),
+			radial-gradient(at 92% 11%, hsla(236, 100%, 8%, 1) 0px, transparent 50%);
 	}
 
 	h1 {

@@ -14,28 +14,12 @@ const Layout = function ({
 	const canonicalURL = `${process.env.NEXT_PUBLIC_SITE_URL}${router.pathname}`;
 
 	return (
-		<motion.div
-			animate={{
-				backgroundColor: [
-					'hsla(240, 97%, 13%, 1)',
-					'hsla(236, 100%, 8%, 1)',
-					'hsla(135, 0%, 0%, 1)',
-				],
-			}}
-			transition={{
-				type: 'tween',
-				duration: 5,
-				ease: [1, 1, 1, 1],
-				repeat: Infinity,
-				repeatType: 'reverse',
-			}}
-			className="gradbackground flex min-w-full"
-		>
+		<motion.div className="gradbackground flex min-w-full">
 			<motion.div
 				animate={{
 					backgroundImage: [
 						'radial-gradient(at 10% 20%, hsla(240, 97%, 13%, 1) 0px, transparent 50%)',
-						'radial-gradient(at 100% 80%, hsla(240, 97%, 13%, 1) 0px, transparent 50%)',
+						'radial-gradient(at 100% 40%, hsla(236, 100%, 8%, 1) 0px, transparent 50%)',
 					],
 				}}
 				transition={{
