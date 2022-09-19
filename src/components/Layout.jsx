@@ -24,7 +24,7 @@ const Layout = function ({
 				}}
 				transition={{
 					type: 'tween',
-					duration: 5,
+					duration: 2,
 					ease: [1, 1, 1, 1],
 					repeat: Infinity,
 					repeatType: 'reverse',
