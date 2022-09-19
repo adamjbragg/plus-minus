@@ -1,12 +1,24 @@
 {
-  "items": [
-    {
-      "title": "Home",
-      "url": "/"
-    },
-    {
-      "title": "About",
-      "url": "/about"
-    }
-  ]
+	"items": [
+		{
+			"id": 1,
+			"title": "Home",
+			"url": "/"
+		},
+		{
+			"id": 2,
+			"title": "About",
+			"url": "/about"
+		},
+		{
+			"id": 3,
+			"title": "Writing",
+			"url": "/writing"
+		},
+		{
+			"id": 4,
+			"title": "Contact",
+			"url": "/contact"
+		}
+	]
 }
