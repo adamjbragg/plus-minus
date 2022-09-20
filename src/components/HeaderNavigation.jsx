@@ -1,14 +1,13 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { useState } from 'react';
 import { useRouter } from 'next/router';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import Link from 'next/link';
 import nav from '@/data/nav.json';
 
 const HeaderNavList = function () {
 	const router = useRouter();
 	const [focused, setFocused] = useState(null);
-	const [selected, setSelected] = useState(null);
 
 	return (
 		<div className="flex fixed bottom-[70px] w-full mx-auto left-1/2 -translate-x-1/2 justify-center px-8 z-10">
