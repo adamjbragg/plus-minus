@@ -16,13 +16,11 @@
 		margin: 0;
 	}
 	html,
-	body,
-	#__next {
+	body {
 		height: 100%;
 		@apply font-space-sans;
 	}
 	body {
-		@apply overflow-x-hidden;
 		line-height: 1.5;
 		-webkit-font-smoothing: antialiased;
 	}
@@ -52,6 +50,11 @@
 	#root,
 	#__next {
 		isolation: isolate;
+	}
+
+	#__next {
+		/* helps crop large text */
+		@apply h-full overflow-x-hidden;
 	}
 
 	html {

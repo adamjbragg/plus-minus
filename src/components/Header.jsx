@@ -11,14 +11,18 @@ const Header = function () {
 				<div className="flex w-full flex-row justify-center items-center py-5">
 					<h1 className="sr-only">{general.siteTitle}</h1>
 					<NextLink href="/">
-						<a className="fixed left-20">
+						<a className="fixed left-20 z-50">
 							<Logo />
 						</a>
 					</NextLink>
 					<div className="text-center">
 						<TimeDateLocation />
 					</div>
-					<Link href="#" label="Start a Project" className="fixed right-20" />
+					<Link
+						href="#"
+						label="Start a Project"
+						className="fixed right-20 z-50"
+					/>
 				</div>
 			</div>
 		</header>
