@@ -10,7 +10,7 @@ export default function About() {
 	return (
 		<Layout pageTitle={meta.pageTitle} pageDescription={meta.pageDescription}>
 			<section className="relative flex flex-col items-start pt-36 h-[120vh] space-y-5">
-				<LargeText>About</LargeText>
+				<LargeText text="About" />
 				<h1 className="text-5xl leading-tight max-w-screen-lg">
 					About content here.
 				</h1>

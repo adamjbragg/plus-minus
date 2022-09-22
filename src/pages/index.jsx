@@ -1,5 +1,6 @@
 import Link from '@/components/Link';
 import Layout from '@/components/Layout';
+import LargeText from '@/components/LargeText';
 
 const meta = {
 	pageTitle: 'Home',
@@ -10,11 +11,10 @@ export default function Home() {
 	return (
 		<Layout pageTitle={meta.pageTitle} pageDescription={meta.pageDescription}>
 			<section className="relative flex flex-col items-start pt-36 h-[70vh] space-y-5">
-				<LargeText>
-					Plus
-					<br />
-					Minus
-				</LargeText>
+				<LargeText text="Plus" />
+				<div className="relative block top-[15vw]">
+					<LargeText text="Minus" />
+				</div>
 				<p className="text-5xl leading-tight max-w-screen-lg">
 					<span className="font-bold">Plus Minus</span> is a web development
 					studio
@@ -32,13 +32,5 @@ export default function Home() {
 				<LargeText text="Writing" />
 			</section>
 		</Layout>
-	);
-}
-
-export function LargeText({ children, text = '' }) {
-	return (
-		<span className="text-[32vw] -left-36 text-pm-purple opacity-50 mix-blend-saturation font-bold leading-[0.9] absolute -top-40 -z-[5]">
-			{text || children}
-		</span>
 	);
 }
