@@ -33,6 +33,9 @@ const uid = () =>
 // then output each word on a new line.
 
 export default function LargeText({ text, className }) {
+	const words = [...text];
+	const space = ' ';
+
 	return (
 		<motion.div
 			variants={listVariants}
@@ -41,16 +44,22 @@ export default function LargeText({ text, className }) {
 			viewport={{ once: true, amount: 0.5 }}
 			className={classNames(
 				'flex absolute overflow-hidden mix-blend-multiply opacity-100',
-				'text-[27vw] text-pm-purple font-bold leading-none',
-				'-translate-x-32 -translate-y-64 -z-10',
+				words.includes(space) ? 'flex-wrap' : null,
+				'text-[27vw] text-pm-purple font-bold leading-[.8]',
+				'-translate-x-32 -translate-y-60 -z-10',
 				className || null
 			)}
 		>
-			{[...text].map((letter) => (
-				<motion.span variants={itemVariants} key={`item-${letter}-${uid()}`}>
-					{letter}
-				</motion.span>
-			))}
+			{words.map((letter) => {
+				if (letter === space) {
+					return <span className="h-0 basis-full" key={uid()} />;
+				}
+				return (
+					<motion.span variants={itemVariants} key={uid()}>
+						{letter}
+					</motion.span>
+				);
+			})}
 		</motion.div>
 	);
 }
