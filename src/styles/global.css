@@ -47,10 +47,10 @@
 	h6 {
 		overflow-wrap: break-word;
 	}
-	#root,
+	/* #root,
 	#__next {
 		isolation: isolate;
-	}
+	} */
 
 	#__next {
 		/* helps crop large text */
@@ -102,7 +102,7 @@
 
 .radial {
 	background: radial-gradient(black, purple, red);
-	background-size: 100% 50%;
+	background-size: 100% 100%;
 	animation: Gradient 5s ease infinite;
 }
 

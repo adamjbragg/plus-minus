@@ -33,8 +33,8 @@ const Layout = function ({
 	return (
 		<motion.div id="top" className="flex min-w-full overflow-x-hidden">
 			<Background />
-			<div className="gradbackground radial absolute h-full w-full -z-10" />
-			<div className="radial absolute h-full w-full -z-20 opacity-40" />
+			<div className="gradbackground absolute h-full w-full -z-10 overflow-hidden" />
+			<div className="radial absolute h-full w-full -z-20 opacity-40 overflow-hidden" />
 			<motion.div className="relative flex-1 flex flex-col items-center justify-center min-h-full ">
 				<NextSeo
 					title={pageTitle}
