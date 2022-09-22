@@ -33,23 +33,9 @@ const Layout = function ({
 	return (
 		<motion.div id="top" className="flex min-w-full overflow-x-hidden">
 			<Background />
-			<motion.div
-				// animate={{
-				// 	backgroundImage: [
-				// 		'radial-gradient(at 10% 20%, hsla(240, 97%, 13%, 1) 0px, transparent 50%)',
-				// 		'radial-gradient(at 0% 0%, hsla(236, 100%, 16%, 1) 200px, transparent 50%)',
-				// 		'radial-gradient(at 20% 0%, hsla(236, 100%, 8%, 1) 500px, transparent 50%)',
-				// 	],
-				// }}
-				// transition={{
-				// 	type: 'tween',
-				// 	duration: 3,
-				// 	ease: [1, 1, 1, 1],
-				// 	repeat: 1,
-				// 	repeatType: 'reverse',
-				// }}
-				className="flex-1 flex flex-col items-center justify-center min-h-full"
-			>
+			<div className="gradbackground radial absolute h-full w-full -z-10" />
+			<div className="radial absolute h-full w-full -z-20 opacity-40" />
+			<motion.div className="relative flex-1 flex flex-col items-center justify-center min-h-full ">
 				<NextSeo
 					title={pageTitle}
 					titleTemplate="Plus Minus • %s"

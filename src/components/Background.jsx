@@ -5,8 +5,8 @@ export default function Background() {
 
 	const SPEED = 0.02;
 
-	const C1 = 64;
-	const C2 = 64;
+	const C1 = 0;
+	const C2 = 150;
 
 	const color = function (context, { x, y, r, g, b }) {
 		context.fillStyle = `rgb(${r}, ${g}, ${b})`;
@@ -70,7 +70,7 @@ export default function Background() {
 
 	return (
 		<canvas
-			className="w-full h-full absolute -z-50"
+			className="w-full h-full absolute opacity-10"
 			ref={canvasRef}
 			width="32px"
 			height="32px"

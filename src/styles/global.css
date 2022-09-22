@@ -59,7 +59,7 @@
 
 	html {
 		@apply text-white;
-		/* background-color: hsla(248, 97%, 14%, 1); */
+		background-color: hsla(248, 97%, 14%, 1);
 	}
 
 	.gradbackground {
@@ -97,5 +97,29 @@
 	main a,
 	footer a {
 		@apply border-b border-pm-green hover:border-transparent transition-all duration-300 ease-in-out;
+	}
+}
+
+.radial {
+	background: radial-gradient(black, purple, red);
+	background-size: 100% 50%;
+	animation: Gradient 5s ease infinite;
+}
+
+.gradbackground {
+	background: linear-gradient(-45deg, #060145, #09012c, #340b8a);
+	background-size: 200% 200%;
+	animation: Gradient 15s ease infinite;
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
 	}
 }
