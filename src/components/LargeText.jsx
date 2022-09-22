@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 const listVariants = {
 	animate: {
 		transition: {
-			when: 'beforeChildren',
 			delayChildren: 0.4,
 			staggerChildren: 0.1,
 		},
@@ -21,6 +20,7 @@ const itemVariants = {
 	},
 };
 
+// quickly create a unique ID
 const uid = () =>
 	String(Date.now().toString(32) + Math.random().toString(16)).replace(
 		/\./g,
