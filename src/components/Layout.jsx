@@ -37,7 +37,7 @@ const Layout = function ({
 	};
 
 	return (
-		<motion.div id="top" className="flex min-w-full overflow-x-hidden">
+		<div id="top" className="flex min-w-full overflow-x-hidden">
 			<InView
 				duration={1}
 				delay={0.5}
@@ -46,21 +46,19 @@ const Layout = function ({
 			>
 				<GradientCanvas />
 			</InView>
-			<motion.div className="relative flex-1 flex flex-col items-center justify-center min-h-full ">
+			<Header />
+			<div className="relative flex-1 flex flex-col items-center justify-center min-h-full ">
 				<NextSeo
 					title={pageTitle}
 					titleTemplate="Plus Minus • %s"
 					description={pageDescription}
 					canonical={canonicalURL}
 				/>
-				<Header />
-				<HeaderNavigation />
 				<main className="flex flex-col flex-1 w-full h-full px-20">
 					{children}
 				</main>
-				<Footer />
-			</motion.div>
-		</motion.div>
+			</div>
+		</div>
 	);
 };
 

@@ -44,22 +44,18 @@ export default function LargeText({ text, className }) {
 			viewport={{ once: true, amount: 0.5 }}
 			className={classNames(
 				'flex absolute overflow-hidden mix-blend-multiply',
-				words.includes(space) ? 'flex-wrap leading-[23vw]' : ' leading-none',
-				' text-pm-purple font-bold align-top',
-				'-translate-x-32 -translate-y-60 -z-10',
+				words.includes(space) ? 'flex-wrap leading-none' : ' leading-none',
+				'text-[27vw] text-pm-purple font-bold',
+				'-translate-x-16 -z-10',
 				className || null
 			)}
 		>
 			{words.map((letter) => {
 				if (letter === space) {
-					return <span className="text-[27vw] basis-full" key={uid()} />;
+					return <span className="h-0 basis-full" key={uid()} />;
 				}
 				return (
-					<motion.span
-						className="text-[27vw]"
-						variants={itemVariants}
-						key={uid()}
-					>
+					<motion.span className="" variants={itemVariants} key={uid()}>
 						{letter}
 					</motion.span>
 				);
