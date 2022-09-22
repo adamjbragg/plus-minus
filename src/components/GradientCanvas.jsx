@@ -1,4 +1,8 @@
 /* eslint-disable no-plusplus */
+
+// Reference for creating the gradient canvas
+// https://www.codiga.io/blog/creating-gradient-animations-with-react-canvas-css/
+
 import { useEffect, useRef } from 'react';
 
 export default function GradientCanvas() {
