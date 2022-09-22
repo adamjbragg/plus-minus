@@ -33,7 +33,7 @@ export default function LargeText({ text }) {
 			variants={listVariants}
 			initial="initial"
 			animate="animate"
-			className="flex flex-row text-[32vw] absolute overflow-hidden -left-36 text-pm-purple mix-blend-saturation font-bold leading-[0.9] -top-40 -z-[5]"
+			className="flex flex-row text-[32vw] absolute overflow-hidden -left-36 text-pm-purple mix-blend-saturation font-bold leading-[1.25] -top-48 -z-[5]"
 		>
 			{[...text].map((letter) => (
 				<motion.span
