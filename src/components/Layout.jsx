@@ -5,7 +5,8 @@ import { motion } from 'framer-motion';
 import Header from './Header';
 import Footer from './Footer';
 import HeaderNavigation from './HeaderNavigation';
-import Background from './Background';
+import GradientCanvas from './GradientCanvas';
+import InView from './InView';
 
 const Layout = function ({
 	children,
@@ -30,11 +31,21 @@ const Layout = function ({
 		};
 	}, [router, router.events]);
 
+	const backgroundFadeIn = {
+		visible: { opacity: 0.1 },
+		hidden: { opacity: 0 },
+	};
+
 	return (
 		<motion.div id="top" className="flex min-w-full overflow-x-hidden">
-			<Background />
-			<div className="gradbackground absolute h-full w-full -z-10 overflow-hidden" />
-			<div className="radial absolute h-full w-full -z-20 opacity-40 overflow-hidden" />
+			<InView
+				duration={1}
+				delay={0.5}
+				variants={backgroundFadeIn}
+				className="mix-blend-screen -z-20"
+			>
+				<GradientCanvas />
+			</InView>
 			<motion.div className="relative flex-1 flex flex-col items-center justify-center min-h-full ">
 				<NextSeo
 					title={pageTitle}

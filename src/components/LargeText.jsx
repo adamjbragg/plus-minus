@@ -11,7 +11,7 @@ const listVariants = {
 };
 
 const itemVariants = {
-	initial: { y: 600 },
+	initial: { y: 1000 },
 	animate: {
 		y: -50,
 		transition: {
@@ -43,19 +43,23 @@ export default function LargeText({ text, className }) {
 			whileInView="animate" // apply the animate variant when the div is in view
 			viewport={{ once: true, amount: 0.5 }}
 			className={classNames(
-				'flex absolute overflow-hidden mix-blend-multiply opacity-100',
+				'flex absolute overflow-hidden mix-blend-multiply',
 				words.includes(space) ? 'flex-wrap' : null,
-				'text-[27vw] text-pm-purple font-bold leading-[.8]',
+				' text-pm-purple font-bold align-top leading-none',
 				'-translate-x-32 -translate-y-60 -z-10',
 				className || null
 			)}
 		>
 			{words.map((letter) => {
 				if (letter === space) {
-					return <span className="h-0 basis-full" key={uid()} />;
+					return <span className="text-[27vw] basis-full" key={uid()} />;
 				}
 				return (
-					<motion.span variants={itemVariants} key={uid()}>
+					<motion.span
+						className="text-[27vw]"
+						variants={itemVariants}
+						key={uid()}
+					>
 						{letter}
 					</motion.span>
 				);
