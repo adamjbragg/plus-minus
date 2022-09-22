@@ -1,3 +1,4 @@
+/* eslint-disable no-plusplus */
 import { useEffect, useRef } from 'react';
 
 export default function Background() {
