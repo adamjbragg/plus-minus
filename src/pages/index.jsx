@@ -30,6 +30,7 @@ export default function Home() {
 			</section>
 			<section className="relative flex items-start h-[70vh]">
 				<LargeText text="Writing" />
+				blog list
 			</section>
 		</Layout>
 	);

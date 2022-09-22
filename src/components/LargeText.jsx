@@ -34,7 +34,7 @@ export default function LargeText({ text }) {
 			initial="initial"
 			whileInView="animate" // apply the animate variant when the div is in view
 			viewport={{ once: true, amount: 0.5 }}
-			className="flex flex-row text-[32vw] absolute overflow-hidden -left-36 text-pm-purple mix-blend-multiply font-bold leading-[1.25] -top-48 -z-10"
+			className="flex flex-row text-[32vw] absolute overflow-hidden -left-36 text-pm-purple mix-blend-multiply opacity-40 font-bold leading-[1.25] -top-48 -z-10"
 		>
 			{[...text].map((letter) => (
 				<motion.span
