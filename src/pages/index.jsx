@@ -11,10 +11,7 @@ export default function Home() {
 	return (
 		<Layout pageTitle={meta.pageTitle} pageDescription={meta.pageDescription}>
 			<section className="relative flex flex-col items-start pt-36 h-[70vh] space-y-5">
-				<LargeText text="Plus" />
-				<div className="absolute top-[28vw]">
-					<LargeText text="Minus" />
-				</div>
+				<LargeText text="Plus Minus" />
 				<p className="text-5xl leading-tight max-w-screen-lg">
 					<span className="font-bold">Plus Minus</span> is a web development
 					studio

@@ -28,24 +28,11 @@ const uid = () =>
 		''
 	);
 
+// To Do
+// write function to split strings into separate words
+// then output each word on a new line.
+
 export default function LargeText({ text, className }) {
-	const splitWords = (words) => {
-		const textSpread = [...words];
-
-		if (textSpread.includes(' ')) {
-			const indexToSplit = textSpread.indexOf(' ');
-			const first = textSpread.slice(0, indexToSplit);
-			const second = textSpread.slice(indexToSplit + 1);
-
-			const split = [first, second];
-
-			return split;
-		}
-
-		return [...words];
-	};
-
-	console.log(splitWords(text));
 	return (
 		<motion.div
 			variants={listVariants}
@@ -59,7 +46,7 @@ export default function LargeText({ text, className }) {
 				className || null
 			)}
 		>
-			{splitWords(text).map((letter) => (
+			{[...text].map((letter) => (
 				<motion.span variants={itemVariants} key={`item-${letter}-${uid()}`}>
 					{letter}
 				</motion.span>
