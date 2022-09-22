@@ -1,20 +1,19 @@
-import { useInView } from 'framer-motion';
-import { useRef } from 'react';
+import { motion } from 'framer-motion';
 
-export default function InView({ className, children, delay = '1.5s' }) {
-	const ref = useRef(null);
-	const isInView = useInView(ref, { once: true });
-
+export default function InView({ className, children, delay = 1.5 }) {
 	return (
-		<div
+		<motion.div
 			className={className}
-			ref={ref}
-			style={{
-				opacity: isInView ? 1 : 0,
-				transition: `all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) ${delay}`,
+			initial="hidden"
+			whileInView="visible"
+			viewport={{ once: true }}
+			transition={{ duration: 0.3, delay }}
+			variants={{
+				visible: { opacity: 1 },
+				hidden: { opacity: 0 },
 			}}
 		>
 			{children}
-		</div>
+		</motion.div>
 	);
 }

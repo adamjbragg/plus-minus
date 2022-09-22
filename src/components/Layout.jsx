@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import Header from './Header';
 import Footer from './Footer';
 import HeaderNavigation from './HeaderNavigation';
+import Background from './Background';
 
 const Layout = function ({
 	children,
@@ -30,10 +31,8 @@ const Layout = function ({
 	}, [router, router.events]);
 
 	return (
-		<motion.div
-			id="top"
-			className="gradbackground flex min-w-full overflow-x-hidden"
-		>
+		<motion.div id="top" className="flex min-w-full overflow-x-hidden">
+			<Background />
 			<motion.div
 				// animate={{
 				// 	backgroundImage: [

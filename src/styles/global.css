@@ -59,7 +59,7 @@
 
 	html {
 		@apply text-white;
-		background-color: hsla(248, 97%, 14%, 1);
+		/* background-color: hsla(248, 97%, 14%, 1); */
 	}
 
 	.gradbackground {
