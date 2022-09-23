@@ -2,8 +2,9 @@ import Layout from '@/components/Layout';
 import LargeText from '@/components/LargeText';
 
 const meta = {
-	pageTitle: 'Home',
-	pageDescription: 'Page description',
+	pageTitle: 'Hi!',
+	pageDescription:
+		'Plus Minusis a web development studio building and managing websites for design agencies and businesses.',
 };
 
 export default function Home() {
