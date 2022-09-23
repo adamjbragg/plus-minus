@@ -11,17 +11,17 @@ const Header = function () {
 				<div className="flex w-full flex-row justify-center items-center py-5">
 					<h1 className="sr-only">{general.siteTitle}</h1>
 					<NextLink href="/">
-						<a className="fixed left-20 z-50">
+						<a className="fixed left-5 md:left-20 z-50">
 							<Logo />
 						</a>
 					</NextLink>
-					<div className="text-center">
+					<div className="fixed bottom-5 text-center">
 						<TimeDateLocation />
 					</div>
 					<Link
 						href="mailto:hello@plusminus.dev"
 						label="Start a Project"
-						className="fixed right-20 z-50"
+						className="fixed right-5 md:right-20 z-50"
 					/>
 				</div>
 			</div>

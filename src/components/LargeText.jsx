@@ -13,7 +13,7 @@ const listVariants = {
 const itemVariants = {
 	initial: { y: 1000 },
 	animate: {
-		y: -50,
+		y: 0,
 		transition: {
 			ease: [0.6, 0.01, -0.05, 0.95],
 			duration: 1,
@@ -37,30 +37,31 @@ export default function LargeText({ text, className }) {
 	const space = ' ';
 
 	return (
-		<motion.div
-			variants={listVariants}
-			initial="initial"
-			whileInView="animate" // apply the animate variant when the div is in view
-			viewport={{ once: true, amount: 0.5 }}
-			className={classNames(
-				'flex absolute overflow-hidden mix-blend-multiply',
-				words.includes(space) ? 'flex-wrap leading-none' : ' leading-none',
-				'text-[27vw] text-pm-purple font-bold',
-				'-translate-x-16 -z-10',
-				className || null
-			)}
-		>
-			{words.map((letter) => {
-				if (letter === space) {
-					return <span className="h-0 basis-full" key={uid()} />;
-				}
-				return (
-					<motion.span className="" variants={itemVariants} key={uid()}>
-						{letter}
-					</motion.span>
-				);
-			})}
-		</motion.div>
+		<div className="fixed h-fit w-fit origin-center mix-blend-multiply">
+			<motion.div
+				variants={listVariants}
+				initial="initial"
+				whileInView="animate" // apply the animate variant when the div is in view
+				viewport={{ once: true, amount: 0.5 }}
+				className={classNames(
+					'flex',
+					words.includes(space) ? 'flex-wrap leading-none' : ' leading-none',
+					'text-[30vw] text-pm-purple font-bold -z-10',
+					className || null
+				)}
+			>
+				{words.map((letter) => {
+					if (letter === space) {
+						return <span className="h-0 basis-full" key={uid()} />;
+					}
+					return (
+						<motion.span variants={itemVariants} key={uid()}>
+							{letter}
+						</motion.span>
+					);
+				})}
+			</motion.div>
+		</div>
 	);
 }
 //

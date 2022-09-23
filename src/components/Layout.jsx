@@ -42,7 +42,7 @@ const Layout = function ({
 				duration={1}
 				delay={0.5}
 				variants={backgroundFadeIn}
-				className="mix-blend-screen -z-20"
+				className="h-full w-full absolute mix-blend-screen -z-20"
 			>
 				<GradientCanvas />
 			</InView>
@@ -54,7 +54,7 @@ const Layout = function ({
 					description={pageDescription}
 					canonical={canonicalURL}
 				/>
-				<main className="flex flex-col flex-1 w-full h-full px-20">
+				<main className="flex flex-col flex-1 w-full h-full px-5 md:px-20">
 					{children}
 				</main>
 			</div>
