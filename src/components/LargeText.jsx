@@ -43,7 +43,7 @@ export default function LargeText({ text, className }) {
 				'right md:transform-none',
 				'origin-bottom-right bottom-1/2 right-0 top-auto',
 				'md:bottom-0 md:top-0 md:origin-center',
-				'text-[22vh] md:text-[33.5vw]',
+				'text-[20vh] md:text-[33.5vw]',
 				'mix-blend-multiply'
 			)}
 		>
