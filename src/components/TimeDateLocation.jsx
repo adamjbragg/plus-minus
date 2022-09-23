@@ -15,6 +15,7 @@ export default function TimeDateLocation() {
 		hour: 'numeric',
 		minute: '2-digit',
 		second: '2-digit',
+		timeZone: 'Australia/Canberra',
 	};
 
 	const dateOptions = {
@@ -22,7 +23,6 @@ export default function TimeDateLocation() {
 		year: 'numeric',
 		month: 'long',
 		day: 'numeric',
-		timeZone: 'Australia/Canberra',
 	};
 
 	useEffect(() => {
