@@ -1,6 +1,5 @@
 import NextLink from 'next/link';
 import general from '@/data/general.json';
-import TimeDateLocation from './TimeDateLocation';
 import Logo from './Logo';
 import Link from './Link';
 
@@ -15,9 +14,6 @@ const Header = function () {
 							<Logo />
 						</a>
 					</NextLink>
-					<div className="fixed bottom-5 text-center">
-						<TimeDateLocation />
-					</div>
 					<Link
 						href="mailto:hello@plusminus.dev"
 						label="Start a Project"

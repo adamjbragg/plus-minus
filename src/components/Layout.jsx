@@ -1,12 +1,10 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { NextSeo } from 'next-seo';
-import { motion } from 'framer-motion';
 import Header from './Header';
-import Footer from './Footer';
-import HeaderNavigation from './HeaderNavigation';
 import GradientCanvas from './GradientCanvas';
 import InView from './InView';
+import TimeDateLocation from './TimeDateLocation';
 
 const Layout = function ({
 	children,
@@ -57,6 +55,9 @@ const Layout = function ({
 				<main className="flex flex-col flex-1 w-full h-full px-5 md:px-20">
 					{children}
 				</main>
+				<div className="absolute w-full bottom-5 text-left md:text-center  px-5 md:px-20">
+					<TimeDateLocation />
+				</div>
 			</div>
 		</div>
 	);
