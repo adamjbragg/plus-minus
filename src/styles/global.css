@@ -23,6 +23,9 @@
 	body {
 		line-height: 1.5;
 		-webkit-font-smoothing: antialiased;
+		min-height: 100vh;
+		/* mobile viewport bug fix */
+		min-height: -webkit-fill-available;
 	}
 	img,
 	picture,
@@ -60,8 +63,7 @@
 
 	html {
 		@apply text-white;
-		background: linear-gradient(45deg, #060145, #09012c, #340b8a);
-		background-size: 200% 200%;
+		background: #000;
 	}
 
 	h1 {
@@ -91,7 +93,12 @@
 }
 
 .radial {
-	background: radial-gradient(red, purple, black);
+	background: radial-gradient(white, purple, black);
+}
+
+.linear {
+	background: linear-gradient(248deg, #796eff, #0a0543, #3a3a3a);
+	background-size: 200% 200%;
 }
 
 /* @keyframes Gradient {

@@ -7,7 +7,7 @@ import { useEffect, useRef } from 'react';
 
 export default function GradientCanvas() {
 	const canvasRef = useRef(null);
-	const speed = 0.02;
+	const speed = 0.015;
 	const colour1 = 0;
 	const colour2 = 150;
 
@@ -18,7 +18,7 @@ export default function GradientCanvas() {
 
 	const red = function (x, y, time) {
 		return Math.floor(
-			colour1 + colour2 * Math.cos((x * x - y * y) / 300 + time)
+			colour1 + colour2 * Math.sin((x * x - y * y) / 5000 + time)
 		);
 	};
 

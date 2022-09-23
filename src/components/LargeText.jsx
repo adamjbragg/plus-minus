@@ -41,12 +41,12 @@ export default function LargeText({ text, className }) {
 			variants={listVariants}
 			initial="initial"
 			whileInView="animate" // apply the animate variant when the div is in view
-			viewport={{ once: true, amount: 0.5 }}
+			viewport={{ once: true, amount: 0 }}
 			className={classNames(
 				'flex absolute overflow-hidden mix-blend-multiply',
 				words.includes(space) ? 'flex-wrap leading-[23vw]' : ' leading-none',
 				' text-pm-purple font-bold align-top',
-				'-translate-x-32 -translate-y-60 -z-10',
+				'-translate-x-32 -translate-y-60',
 				className || null
 			)}
 		>
