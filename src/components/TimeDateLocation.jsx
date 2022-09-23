@@ -31,7 +31,7 @@ export default function TimeDateLocation() {
 	}, []);
 
 	return (
-		<InView className="text-xs space-x-0 md:space-x-2 flex flex-col md:flex-row">
+		<InView className="text-xs space-x-0 md:space-x-2 flex flex-col w-full md:justify-center md:flex-row">
 			{!isSSR && <span>{date.toLocaleString('en-AU', timeOptions)}</span>}
 			{/* if client side render time */}
 			<span className="hidden md:inline-block">•</span>

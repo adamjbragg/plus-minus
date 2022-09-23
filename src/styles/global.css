@@ -60,7 +60,7 @@
 
 	html {
 		@apply text-white;
-		background: #060145;
+		background: #000;
 	}
 
 	h1 {
@@ -94,8 +94,8 @@
 }
 
 .linear {
-	background: linear-gradient(248deg, #796eff, #060145, #000);
-	background-size: 100% 100%;
+	background: linear-gradient(248deg, #796eff, #0a0543, #3a3a3a);
+	background-size: 200% 200%;
 }
 
 .right {
