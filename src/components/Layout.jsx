@@ -52,9 +52,7 @@ const Layout = function ({
 					description={pageDescription}
 					canonical={canonicalURL}
 				/>
-				<main className="flex flex-col flex-1 w-full h-full px-5 md:px-20">
-					{children}
-				</main>
+				<main className="flex flex-col flex-1 px-5 md:px-20">{children}</main>
 				<div className="absolute w-full bottom-5 text-left md:text-center  px-5 md:px-20">
 					<TimeDateLocation />
 				</div>
