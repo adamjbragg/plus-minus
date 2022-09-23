@@ -9,7 +9,7 @@ export default function GradientCanvas() {
 	const canvasRef = useRef(null);
 	const speed = 0.015;
 	const colour1 = 0;
-	const colour2 = 150;
+	const colour2 = 175;
 
 	const color = function (context, { x, y, r, g, b }) {
 		context.fillStyle = `rgb(${r}, ${g}, ${b})`;
