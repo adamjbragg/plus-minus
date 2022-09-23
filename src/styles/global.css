@@ -94,6 +94,10 @@
 	background: radial-gradient(red, purple, black);
 }
 
+.right {
+	transform: rotate(-90deg) translateX(50%);
+}
+
 /* @keyframes Gradient {
 	0% {
 		background-position: 0% 50%;
