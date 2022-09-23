@@ -94,11 +94,12 @@
 
 .radial {
 	background: radial-gradient(white, purple, black);
+	background-size: 150% 150%;
 }
 
 .linear {
-	background: linear-gradient(248deg, #796eff, #0a0543, #3a3a3a);
-	background-size: 200% 200%;
+	background: linear-gradient(239deg, #00ff5e, #0a0543, #000000);
+	background-size: 250% 250%;
 }
 
 .right {
