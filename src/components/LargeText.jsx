@@ -46,7 +46,7 @@ export default function LargeText({ text, className }) {
 				'flex absolute overflow-hidden mix-blend-multiply',
 				words.includes(space) ? 'flex-wrap leading-[23vw]' : ' leading-none',
 				' text-pm-purple font-bold align-top',
-				'-translate-x-32 -translate-y-60',
+				'-translate-x-32 -translate-y-60 -z-10',
 				className || null
 			)}
 		>
