@@ -60,8 +60,7 @@
 
 	html {
 		@apply text-white;
-		background: linear-gradient(45deg, #060145, #09012c, #340b8a);
-		background-size: 200% 200%;
+		background: #060145;
 	}
 
 	h1 {
@@ -91,7 +90,12 @@
 }
 
 .radial {
-	background: radial-gradient(red, purple, black);
+	background: radial-gradient(white, purple, black);
+}
+
+.linear {
+	background: linear-gradient(248deg, #796eff, #060145, #000);
+	background-size: 100% 100%;
 }
 
 .right {

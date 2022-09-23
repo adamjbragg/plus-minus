@@ -34,7 +34,8 @@ class MyDocument extends Document {
 						}}
 					/>
 				</Head>
-				<div className="radial absolute h-full w-full opacity-40 overflow-hidden mix-blend-overlay" />
+				<div className="linear absolute h-full w-full opacity-100 overflow-hidden" />
+				<div className="radial absolute h-full w-full opacity-100 overflow-hidden mix-blend-multiply" />
 				<body>
 					<Main />
 					<NextScript />

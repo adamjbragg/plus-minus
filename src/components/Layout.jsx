@@ -40,7 +40,7 @@ const Layout = function ({
 				duration={1}
 				delay={0.5}
 				variants={backgroundFadeIn}
-				className="h-full w-full absolute mix-blend-screen -z-20"
+				className="h-full w-full absolute"
 			>
 				<GradientCanvas />
 			</InView>
