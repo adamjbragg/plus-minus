@@ -15,7 +15,7 @@ export default function Background() {
 				duration={1}
 				delay={0.5}
 				variants={backgroundFadeIn}
-				className="h-full w-full absolute self-start"
+				className="h-full w-full absolute self-start mix-blend-screen"
 			>
 				<GradientCanvas />
 			</InView>
