@@ -38,23 +38,23 @@ const Layout = function ({
 
 	return (
 		<motion.div id="top" className="flex min-w-full overflow-x-hidden">
-			<InView
-				duration={1}
-				delay={0.5}
-				variants={backgroundFadeIn}
-				className="h-full w-full absolute"
-			>
-				<GradientCanvas />
-			</InView>
+			<NextSeo
+				title={pageTitle}
+				titleTemplate="Plus Minus • %s"
+				description={pageDescription}
+				canonical={canonicalURL}
+			/>
 			<motion.div className="relative flex-1 flex flex-col items-center justify-center min-h-full ">
-				<NextSeo
-					title={pageTitle}
-					titleTemplate="Plus Minus • %s"
-					description={pageDescription}
-					canonical={canonicalURL}
-				/>
 				<Header />
 				<HeaderNavigation />
+				<InView
+					duration={1}
+					delay={0.5}
+					variants={backgroundFadeIn}
+					className="h-full w-full absolute self-start"
+				>
+					<GradientCanvas />
+				</InView>
 				<main className="flex flex-col flex-1 w-full h-full px-20">
 					{children}
 				</main>
