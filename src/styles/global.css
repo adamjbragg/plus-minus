@@ -61,9 +61,12 @@
 		@apply h-full overflow-x-hidden;
 	}
 
+	::selection {
+		@apply text-pm-purple bg-pm-green;
+	}
+
 	html {
-		@apply text-white bg-black;
-		/* background: rgb(17, 17, 17); */
+		@apply text-white bg-pm-black;
 	}
 
 	h1 {
