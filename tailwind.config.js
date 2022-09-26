@@ -9,6 +9,7 @@ module.exports = {
 			colors: {
 				'pm-green': '#00FFB2',
 				'pm-purple': '#340B8A',
+				'pm-black': 'rgb(17, 17, 17)',
 			},
 		},
 	},
