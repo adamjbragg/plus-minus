@@ -5,8 +5,7 @@ import { motion } from 'framer-motion';
 import Header from './Header';
 import Footer from './Footer';
 import HeaderNavigation from './HeaderNavigation';
-import GradientCanvas from './GradientCanvas';
-import InView from './InView';
+import Background from './Background';
 
 const Layout = function ({
 	children,
@@ -31,11 +30,6 @@ const Layout = function ({
 		};
 	}, [router, router.events]);
 
-	const backgroundFadeIn = {
-		visible: { opacity: 0.1 },
-		hidden: { opacity: 0 },
-	};
-
 	return (
 		<motion.div id="top" className="flex min-w-full overflow-x-hidden">
 			<NextSeo
@@ -45,16 +39,9 @@ const Layout = function ({
 				canonical={canonicalURL}
 			/>
 			<motion.div className="relative flex-1 flex flex-col items-center justify-center min-h-full ">
+				<Background />
 				<Header />
 				<HeaderNavigation />
-				<InView
-					duration={1}
-					delay={0.5}
-					variants={backgroundFadeIn}
-					className="h-full w-full absolute self-start"
-				>
-					<GradientCanvas />
-				</InView>
 				<main className="flex flex-col flex-1 w-full h-full px-20">
 					{children}
 				</main>
