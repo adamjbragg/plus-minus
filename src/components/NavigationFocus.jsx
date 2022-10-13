@@ -1,4 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
+// import { useState } from 'react';
 import { useRouter } from 'next/router';
 import { motion, LayoutGroup } from 'framer-motion';
 import NextLink from 'next/link';
@@ -8,6 +9,8 @@ import nav from '@/data/nav.json';
 
 export default function Navigation() {
 	const router = useRouter();
+	// const [focused, setFocused] = useState(null);
+	// console.log(focused);
 
 	function createNavList(item) {
 		if (item.id === 1) {
@@ -22,9 +25,11 @@ export default function Navigation() {
 
 		if (!item.live) {
 			return (
+				// <NextLink href="#" scroll={false}>
 				<span className="relative text-gray-500 border-transparent font-bold text-base z-10 cursor-not-allowed">
 					{item.title}
 				</span>
+				// </NextLink>
 			);
 		}
 
@@ -38,15 +43,38 @@ export default function Navigation() {
 	}
 
 	return (
-		<div className="fixed mx-auto bottom-0 w-full md:max-w-screen px-5 py-4 z-50">
-			<div className="rounded-xl overflow-hidden backdrop-blur-2xl bg-gray-700 bg-opacity-80 p-3 overflow-x-scroll md:overflow-hidden">
-				<ul className="flex flex-row w-full">
+		<div className="fixed mx-auto bottom-0 w-full md:max-w-screen px-5 py-4 z-50 text-whiote">
+			<div
+				className="flex justify-between items-center rounded-xl overflow-hidden backdrop-blur-2xl bg-gray-700 bg-opacity-80 p-3"
+				// onMouseLeave={() => setFocused(null)}
+			>
+				<ul className="flex flex-row space-x-5">
 					{nav.items.map((item) => (
 						<li
-							className="relative flex justify-center items-center ml-4 first:ml-0"
+							className="relative flex justify-center items-center"
 							key={item.id}
+							// onFocus={() => setFocused(item)}
+							// onMouseEnter={() => setFocused(item)}
 						>
+							{/* Next Link Scroll is set to false, scroll up handled in Layout */}
 							{createNavList(item)}
+							{/* <NextLink href={item.url} scroll={false}>
+								<a className="relative text-gray-200 border-transparent font-bold text-base z-10 -translate-y-1">
+									{item.title}
+								</a>
+							</NextLink> */}
+							{/* {focused === item && (
+							<LayoutGroup id="2">
+								<motion.span
+									layout
+									transition={{
+										opacity: { ease: 'linear' },
+									}}
+									layoutId="underline-1"
+									className="absolute bottom-[-4px] h-[4px] left-0 right-0 bg-pm-purple z-0 rounded"
+								/>
+							</LayoutGroup>
+						)} */}
 							{router.pathname === item.url ? (
 								<LayoutGroup id="1">
 									<motion.span
@@ -61,10 +89,10 @@ export default function Navigation() {
 							) : null}
 						</li>
 					))}
-					<li className="flex justify-center items-center ml-auto">
-						<Link href="mailto:hello@plusminus.dev" label="Start a Project" />
-					</li>
 				</ul>
+				<div>
+					<Link href="mailto:hello@plusminus.dev" label="Start a Project" />
+				</div>
 			</div>
 		</div>
 	);

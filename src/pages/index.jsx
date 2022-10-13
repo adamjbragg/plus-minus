@@ -10,18 +10,19 @@ const meta = {
 export default function Home() {
 	return (
 		<Layout pageTitle={meta.pageTitle} pageDescription={meta.pageDescription}>
-			<section className="h-screen relative flex flex-col items-start justify-start space-y-5">
-				<LargeText text="Plus Minus" />
-				<p className="text-5xl leading-tight max-w-screen-lg pt-36 ">
-					<span className="font-bold">Plus Minus</span> is a web development
-					studio
-					<br /> building and managing websites for
-					<br /> design agencies and businesses.
-				</p>
-				<span className="text-pm-green font-bold tracking-wide">
-					I'm building this site in public{' '}
-					<Link href="/about" label="learn more" />.
-				</span>
+			<LargeText text="Plus Minus" />
+			<section className="h-screen relative flex flex-col items-start justify-center">
+				<div className="-translate-y-24">
+					<h2 className="text-2xl md:text-4xl lg:text-5xl m-0 leading-tight max-w-screen-lg">
+						<span className="font-bold">Plus Minus</span> is a web development
+						studio building and managing websites for design agencies and
+						businesses.
+					</h2>
+					<p className="mt-4 relative text-pm-green font-bold tracking-wide">
+						This website is a work in progress{' '}
+						<Link href="/about" label="learn more" />.
+					</p>
+				</div>
 			</section>
 		</Layout>
 	);

@@ -42,7 +42,7 @@ const Layout = function ({
 			<motion.div className="relative flex-1 flex flex-col items-center justify-center min-h-full">
 				<Header />
 				<Navigation />
-				<main className="flex flex-col flex-1 w-full h-full px-20">
+				<main className="flex flex-col flex-1 w-full h-full md:max-w-screen px-5">
 					{children}
 				</main>
 			</motion.div>

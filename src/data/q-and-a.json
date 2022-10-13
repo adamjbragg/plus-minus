@@ -2,13 +2,13 @@
 	"items": [
 		{
 			"id": "sd87",
-			"question": "Why is this website being built in public?",
-			"answer": "Mainly to try something different. Launching anything new can be scary and fraught with the need for it to be perfect. By building it in public features can be added incrementally and viewers following along see how it develops."
+			"question": "Why launch when the site isn't finished?",
+			"answer": "Mainly to try something different, and because a website is never finished. Launching anything new can be scary and fraught with the desire for it to be perfect. By building it in public features can be added incrementally and viewers following along see how it develops."
 		},
 		{
 			"id": "fg23",
 			"question": "What does Plus Minus mean?",
-			"answer": "Naming is one of the hardests tasks in launching any venture. The name Plus Minus came about out of a few criteria.\n\n1. A built in logo or mark\n2. Something easy to say and spell."
+			"answer": "Naming is one of the hardests tasks in launching any venture. The name Plus Minus came about out of a few criteria.\n\n1. A built in logo or mark\n2. Something easy to say and spell"
 		},
 		{
 			"id": "kl54",
@@ -19,6 +19,11 @@
 			"id": "hs98",
 			"question": "Is this website tracking me?",
 			"answer": "Not at all. Analytics can be important, but not for this website."
+		},
+		{
+			"id": "as67",
+			"question": "Will the Canucks make the playoffs?",
+			"answer": "Hopefully, but honestly... probably not. The team doesn't seem much stronger and there weren't enough changes in the defense to think that anything will be different from previous years."
 		}
 	]
 }
