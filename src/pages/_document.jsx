@@ -11,16 +11,41 @@ class MyDocument extends Document {
 		return (
 			<Html lang="en">
 				<Head>
-					{/* <link rel="preconnect" href="https://fonts.googleapis.com" />
-					<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
 					<link
-						href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
-						rel="stylesheet"
+						rel="preload"
+						href="/fonts/space-grotesk-v13-latin-300.woff2"
+						as="font"
+						type="font/woff2"
+						crossOrigin="anonymous"
 					/>
-					<script
-						async
-						src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-					/> */}
+					<link
+						rel="preload"
+						href="/fonts/space-grotesk-v13-latin-regular.woff2"
+						as="font"
+						type="font/woff2"
+						crossOrigin="anonymous"
+					/>
+					<link
+						rel="preload"
+						href="/fonts/space-grotesk-v13-latin-500.woff2"
+						as="font"
+						type="font/woff2"
+						crossOrigin="anonymous"
+					/>
+					<link
+						rel="preload"
+						href="/fonts/space-grotesk-v13-latin-600.woff2"
+						as="font"
+						type="font/woff2"
+						crossOrigin="anonymous"
+					/>
+					<link
+						rel="preload"
+						href="/fonts/space-grotesk-v13-latin-700.woff2"
+						as="font"
+						type="font/woff2"
+						crossOrigin="anonymous"
+					/>
 					<script
 						dangerouslySetInnerHTML={{
 							__html: `
