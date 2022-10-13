@@ -35,7 +35,7 @@ const uid = () =>
 export default function LargeText({ text, className }) {
 	const words = [...text];
 	const space = ' ';
-
+	const hyphen = '-';
 	return (
 		<motion.div
 			variants={listVariants}
@@ -44,13 +44,20 @@ export default function LargeText({ text, className }) {
 			viewport={{ once: true, amount: 0 }}
 			className={classNames(
 				'flex absolute overflow-hidden mix-blend-multiply',
-				words.includes(space) ? 'flex-wrap leading-[23vw]' : ' leading-none',
+				words.includes(space) ? 'flex-wrap leading-[23vw]' : 'leading-none',
 				' text-pm-purple font-bold align-top',
 				'-translate-x-32 -z-10',
 				className || null
 			)}
 		>
 			{words.map((letter) => {
+				if (letter === hyphen) {
+					return (
+						<span className="text-[27vw] text-transparent" key={uid()}>
+							–
+						</span>
+					);
+				}
 				if (letter === space) {
 					return <span className="text-[27vw] basis-full" key={uid()} />;
 				}

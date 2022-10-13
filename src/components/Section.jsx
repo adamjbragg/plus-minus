@@ -1,10 +1,10 @@
 import LargeText from '@/components/LargeText';
 
-export default function Section({ largeText, children }) {
+export default function Section({ largeText, children, classNames }) {
 	return (
 		<section className="relative flex flex-col items-start h-screen">
 			{largeText && <LargeText text={largeText} />}
-			<div className="pt-36 space-y-12">{children}</div>
+			<div className={`${classNames} py-36 space-y-24`}>{children}</div>
 		</section>
 	);
 }

@@ -10,7 +10,7 @@ export default function QandA() {
 
 	return (
 		<Layout pageTitle={meta.pageTitle} pageDescription={meta.pageDescription}>
-			<Section largeText="Q and A" height="100">
+			<Section largeText="Q-&-A" classNames="max-w-2xl m-auto">
 				{questions.items.map((item) => (
 					<div key={item.id} className="max-w-2xl">
 						<h3 className="font-bold m-0">{item.question}</h3>

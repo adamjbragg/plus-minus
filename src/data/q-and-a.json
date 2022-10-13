@@ -8,12 +8,12 @@
 		{
 			"id": "fg23",
 			"question": "What does Plus Minus mean?",
-			"answer": "Naming is one of the hardests tasks in launching a new venture. The name Plus Minus came about out of a few criteria. 1. In built logo 2. Easy to say and spell."
+			"answer": "Naming is one of the hardests tasks in launching any venture. The name Plus Minus came about out of a few criteria.\n\n1. A built in logo or mark\n2. Something easy to say and spell."
 		},
 		{
 			"id": "kl54",
 			"question": "What is Plus Minus working on?",
-			"answer": "Ongoing development of web app with user login, a custom CMS and custom PDF viewer. Built with AWS and Next.JS.\n\nA large scale marketing website for US based sales training company. Built with HubSpot CMS."
+			"answer": "Ongoing development of web app with user login, a custom CMS and custom PDF viewer. Built with AWS and Next.JS.\n\nA large scale marketing website for a US based sales training company. Built with HubSpot CMS."
 		},
 		{
 			"id": "hs98",
