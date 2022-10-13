@@ -11,7 +11,7 @@ const listVariants = {
 };
 
 const itemVariants = {
-	initial: { y: 1000 },
+	initial: { y: 2000 },
 	animate: {
 		y: -50,
 		transition: {
