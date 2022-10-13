@@ -7,9 +7,9 @@ import { useEffect, useRef } from 'react';
 
 export default function GradientCanvas() {
 	const canvasRef = useRef(null);
-	const speed = 0.015;
+	const speed = 0.02;
 	const colour1 = 0;
-	const colour2 = 175;
+	const colour2 = 64;
 
 	const color = function (context, { x, y, r, g, b }) {
 		context.fillStyle = `rgb(${r}, ${g}, ${b})`;
@@ -18,7 +18,7 @@ export default function GradientCanvas() {
 
 	const red = function (x, y, time) {
 		return Math.floor(
-			colour1 + colour2 * Math.sin((x * x - y * y) / 5000 + time)
+			colour1 + colour2 * Math.cos((x * x - y * y) / 300 + time)
 		);
 	};
 
@@ -47,14 +47,14 @@ export default function GradientCanvas() {
 		const canvas = canvasRef.current;
 
 		if (canvas) {
-			const context = canvas.getContext('2d');
+			const ctx = canvas.getContext('2d');
 
 			let time = 0;
 
 			const loop = function () {
 				for (let x = 0; x <= 32; x++) {
 					for (let y = 0; y <= 32; y++) {
-						color(context, {
+						color(ctx, {
 							x,
 							y,
 							r: red(x, y, time),

@@ -19,6 +19,8 @@
 	body {
 		height: 100%;
 		@apply font-space-sans;
+		white-space: pre-line;
+		vertical-align: bottom;
 	}
 	body {
 		line-height: 1.5;
@@ -56,8 +58,8 @@
 		isolation: isolate;
 	} */
 
+	/* helps crop large text */
 	#__next {
-		/* helps crop large text */
 		@apply h-full overflow-x-hidden;
 	}
 

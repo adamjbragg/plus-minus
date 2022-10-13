@@ -1,0 +1,24 @@
+{
+	"items": [
+		{
+			"id": "sd87",
+			"question": "Why is this website being built in public?",
+			"answer": "Mainly to try something different. Launching anything new can be scary and fraught with the need for it to be perfect. By building it in public features can be added incrementally and viewers following along see how it develops."
+		},
+		{
+			"id": "fg23",
+			"question": "What does Plus Minus mean?",
+			"answer": "Naming is one of the hardests tasks in launching a new venture. The name Plus Minus came about out of a few criteria. 1. In built logo 2. Easy to say and spell."
+		},
+		{
+			"id": "kl54",
+			"question": "What is Plus Minus working on?",
+			"answer": "Ongoing development of web app with user login, a custom CMS and custom PDF viewer. Built with AWS and Next.JS.\n\nA large scale marketing website for US based sales training company. Built with HubSpot CMS."
+		},
+		{
+			"id": "hs98",
+			"question": "Is this website tracking me?",
+			"answer": "Not at all. Analytics can be important, but not for this website."
+		}
+	]
+}

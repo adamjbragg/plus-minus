@@ -4,7 +4,7 @@ import { NextSeo } from 'next-seo';
 import { motion } from 'framer-motion';
 import Header from './Header';
 import Footer from './Footer';
-import HeaderNavigation from './HeaderNavigation';
+import Navigation from './Navigation';
 import Background from './Background';
 
 const Layout = function ({
@@ -34,18 +34,17 @@ const Layout = function ({
 		<motion.div id="top" className="flex min-w-full overflow-x-hidden">
 			<NextSeo
 				title={pageTitle}
-				titleTemplate="Plus Minus • %s"
+				titleTemplate={`Plus Minus ${pageDescription} | %s`}
 				description={pageDescription}
 				canonical={canonicalURL}
 			/>
-			<motion.div className="relative flex-1 flex flex-col items-center justify-center min-h-full ">
-				<Background />
+			<Background />
+			<motion.div className="relative flex-1 flex flex-col items-center justify-center min-h-full">
 				<Header />
-				<HeaderNavigation />
+				<Navigation />
 				<main className="flex flex-col flex-1 w-full h-full px-20">
 					{children}
 				</main>
-				<Footer />
 			</motion.div>
 		</motion.div>
 	);
