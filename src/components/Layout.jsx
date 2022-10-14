@@ -2,9 +2,10 @@ import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { NextSeo } from 'next-seo';
 import { motion } from 'framer-motion';
+import useMediaQuery from '@/hooks/useMediaQuery';
 import Header from './Header';
-import Footer from './Footer';
 import Navigation from './Navigation';
+
 import Background from './Background';
 
 const Layout = function ({
@@ -14,13 +15,13 @@ const Layout = function ({
 }) {
 	const router = useRouter();
 	const canonicalURL = `${process.env.NEXT_PUBLIC_SITE_URL}${router.pathname}`;
-
-	// This useEffect handles scrolling our page back to the top on router change.
-	// Our nav sliding animation was jumping when our page was scroll and we changed page
-	// when a wrapper element (our #__Next element) has height: 100% and overflow set
-	// Next Link Scroll is set to false in HeaderNavigation
+	const isDesktop = useMediaQuery('(min-width: 768px)');
 
 	useEffect(() => {
+		// This useEffect handles scrolling our page back to the top on router change.
+		// Our nav sliding animation was jumping when our page was scroll and we changed page
+		// when a wrapper element (our #__Next element) has height: 100% and overflow set
+		// Next Link Scroll is set to false in HeaderNavigation
 		const handleRouteChange = () => {
 			router.push(`${router.pathname}#top`);
 		};
@@ -42,7 +43,8 @@ const Layout = function ({
 			<motion.div className="relative flex-1 flex flex-col items-center justify-center min-h-full">
 				<Header />
 				<Navigation />
-				<main className="flex flex-col flex-1 w-full h-full md:max-w-screen px-5">
+
+				<main className="flex flex-col flex-1 w-full h-full justify-center md:max-w-screen px-5">
 					{children}
 				</main>
 			</motion.div>

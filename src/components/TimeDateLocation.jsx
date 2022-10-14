@@ -15,7 +15,7 @@ export default function TimeDateLocation() {
 		hour: 'numeric',
 		minute: '2-digit',
 		second: '2-digit',
-		timeZone: 'Australia/Canberra',
+		timeZone: 'Australia/Sydney',
 	};
 
 	const dateOptions = {
@@ -31,11 +31,13 @@ export default function TimeDateLocation() {
 	}, []);
 
 	return (
-		<InView className="text-xs">
-			{!isSSR && <span>{date.toLocaleString('en-AU', timeOptions)}</span>}{' '}
+		<InView className="text-xs space-x-0 md:space-x-2 flex flex-col w-full md:justify-center md:flex-row">
+			{!isSSR && <span>{date.toLocaleString('en-AU', timeOptions)}</span>}
 			{/* if client side render time */}
-			<span> • {date.toLocaleString('en-AU', dateOptions)}</span>
-			<span> • Canberra, Australia</span>
+			<span className="hidden md:inline-block">•</span>
+			<span>{date.toLocaleString('en-AU', dateOptions)}</span>
+			<span className="hidden md:inline-block">•</span>
+			<span>Canberra, Australia</span>
 		</InView>
 	);
 }

@@ -9,6 +9,14 @@ module.exports = {
 			maxWidth: {
 				screen: '90%',
 			},
+			fontSize: {
+				'5xl': [
+					'3rem',
+					{
+						lineHeight: '3.5rem',
+					},
+				],
+			},
 			colors: {
 				'pm-green': '#00FFB2',
 				'pm-purple': '#340B8A',

@@ -39,11 +39,11 @@ export default function Navigation() {
 
 	return (
 		<div className="fixed mx-auto bottom-0 w-full md:max-w-screen px-5 py-4 z-50">
-			<div className="rounded-xl overflow-hidden backdrop-blur-2xl bg-gray-700 bg-opacity-80 p-3 overflow-x-scroll md:overflow-hidden">
+			<div className="rounded-xl backdrop-blur-lg bg-gray-700 bg-opacity-50 p-3 overflow-x-scroll md:overflow-hidden">
 				<ul className="flex flex-row w-full">
 					{nav.items.map((item) => (
 						<li
-							className="relative flex justify-center items-center ml-4 first:ml-0"
+							className="relative shrink-0 flex justify-center items-center ml-4 first:ml-0"
 							key={item.id}
 						>
 							{createNavList(item)}
@@ -61,7 +61,7 @@ export default function Navigation() {
 							) : null}
 						</li>
 					))}
-					<li className="flex justify-center items-center ml-auto">
+					<li className="flex shrink-0 justify-center items-center ml-4 md:ml-auto">
 						<Link href="mailto:hello@plusminus.dev" label="Start a Project" />
 					</li>
 				</ul>
